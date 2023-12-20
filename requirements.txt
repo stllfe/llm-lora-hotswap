@@ -1,0 +1,6 @@
+auto-gptq==0.6.0
+gradio==4.10.0
+peft==0.7.1
+torch==2.1.2
+transformers==4.36.1
+optimum==1.16.1
