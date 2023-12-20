@@ -1,6 +1,7 @@
 """Base LLM adapter interface for inheritance."""
 
 import abc
+
 from typing import Iterable, Iterator
 
 import torch

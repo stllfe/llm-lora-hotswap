@@ -17,7 +17,10 @@ log = logging.getLogger('app')
 
 
 if __name__ == '__main__':
-    logging.basicConfig(level=logging.INFO, format='%(levelname)s\t%(name)s: %(message)s')
+    logging.basicConfig(
+        level=logging.DEBUG if config.DEBUG else logging.INFO,
+        format='%(levelname)s\t%(name)s: %(message)s'
+    )
 
     llm = AutoModelForCausalLM.from_pretrained(
         config.BASE_MODEL,

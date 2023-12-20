@@ -118,7 +118,7 @@ class OASSTGuanacoAdapter(LLMAdapterBase):
             top_p=1,
             temperature=0.25,
             repetition_penalty=1.2,
-            max_new_tokens=250,
+            max_new_tokens=256,
         )
 
     def preformat(self, message: str, history: list[tuple[str, str]]) -> str:
