@@ -2,9 +2,9 @@
 
 Это демо приложение на базе [Gradio](https://www.gradio.app/), демонстрирующее возможности горячей замены PEFT-адаптеров, а именно LoRA, над одной и той же LLM прямо в Runtime. Выполнено в рамках тестового задания на позицию ML Engineer.
 
-### Запуск
+## Запуск
 
-#### Вручную
+### Вручную
 Создать окружение Python 3.10.10 с помощью Conda или Pyenv:
 ```shell
 conda create -n myenv python=3.10.10 && conda activate myenv
@@ -19,7 +19,7 @@ pip install -r requirements.txt
 python -m app
 ```
 
-#### Docker
+### Docker
 Собрать образ:
 ```shell
 docker build -t llm-lora-hotswap .
