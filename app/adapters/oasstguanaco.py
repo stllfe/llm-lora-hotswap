@@ -134,7 +134,7 @@ class OASSTGuanacoAdapter(LLMAdapterBase):
         data = self.tokenizer(prompt, return_tensors='pt')
         data = {k: v.to(llm.device) for k, v in data.items()}
         criteria = PhraseStoppingCriteria(
-            STOP_PHRASE,
+            self.STOP_PHRASE,
             prompt=prompt,
             tokenizer=self.tokenizer,
             skip_special_tokens=True
@@ -152,4 +152,4 @@ class OASSTGuanacoAdapter(LLMAdapterBase):
         )
         stream = Thread(target=llm.generate, kwargs=generation_kwargs)
         stream.start()
-        return stream_until(streamer, STOP_PHRASE)
+        return stream_until(streamer, self.STOP_PHRASE)
