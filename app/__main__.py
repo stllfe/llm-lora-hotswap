@@ -73,14 +73,14 @@ if __name__ == '__main__':
             value=model.name,
             label='Adapter',
         )
-        clearhist = gr.Checkbox(
+        checkbox = gr.Checkbox(
             value=True,
             label='Clear history on switch',
             info='Whether to clear a chat history when switching adapters'
         )
         chat = gr.ChatInterface(
             process_message,
-            additional_inputs=[dropdown, clearhist],
+            additional_inputs=[dropdown, checkbox],
             description=__doc__,
         ).queue()
 
